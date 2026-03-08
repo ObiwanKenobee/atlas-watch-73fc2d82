@@ -3,7 +3,14 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+import { AppLayout } from "@/components/AppLayout";
+import CommandCenter from "./pages/CommandCenter";
+import AgentDetail from "./pages/AgentDetail";
+import AlertsPage from "./pages/AlertsPage";
+import ConvergencePage from "./pages/ConvergencePage";
+import RegistryPage from "./pages/RegistryPage";
+import GovernancePage from "./pages/GovernancePage";
+import SandboxPage from "./pages/SandboxPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -14,11 +21,18 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <AppLayout>
+          <Routes>
+            <Route path="/" element={<CommandCenter />} />
+            <Route path="/agents/:id" element={<AgentDetail />} />
+            <Route path="/alerts" element={<AlertsPage />} />
+            <Route path="/convergence" element={<ConvergencePage />} />
+            <Route path="/registry" element={<RegistryPage />} />
+            <Route path="/governance" element={<GovernancePage />} />
+            <Route path="/sandbox" element={<SandboxPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </AppLayout>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
