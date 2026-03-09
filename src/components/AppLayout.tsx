@@ -13,10 +13,11 @@ import {
 } from '@/components/ui/sidebar';
 import { NavLink } from '@/components/NavLink';
 import { useLocation } from 'react-router-dom';
-import { Bot, AlertTriangle, GitBranch, BookOpen, Shield, FlaskConical, Menu } from 'lucide-react';
+import { Bot, AlertTriangle, GitBranch, BookOpen, Shield, FlaskConical, Map } from 'lucide-react';
 
 const navItems = [
   { title: 'Command Center', url: '/', icon: Bot },
+  { title: 'Global Map', url: '/map', icon: Map },
   { title: 'Active Alerts', url: '/alerts', icon: AlertTriangle },
   { title: 'Signal Convergence', url: '/convergence', icon: GitBranch },
   { title: 'Agent Registry', url: '/registry', icon: BookOpen },

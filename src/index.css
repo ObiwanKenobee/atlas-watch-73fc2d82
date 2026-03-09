@@ -117,3 +117,22 @@
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
 }
+
+/* Leaflet popup overrides */
+.atlas-popup .leaflet-popup-content-wrapper {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 8px;
+  padding: 0;
+}
+.atlas-popup .leaflet-popup-tip {
+  background: #111827;
+  border: 1px solid #1e293b;
+}
+.atlas-popup .leaflet-popup-content {
+  margin: 0;
+}
+.atlas-map-marker, .atlas-alert-pulse {
+  background: transparent;
+  border: none;
+}

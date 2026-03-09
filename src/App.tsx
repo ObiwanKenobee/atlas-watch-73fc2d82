@@ -25,6 +25,7 @@ const App = () => (
         <AppLayout>
           <Routes>
             <Route path="/" element={<CommandCenter />} />
+            <Route path="/map" element={<MapPage />} />
             <Route path="/agents/:id" element={<AgentDetail />} />
             <Route path="/alerts" element={<AlertsPage />} />
             <Route path="/convergence" element={<ConvergencePage />} />
