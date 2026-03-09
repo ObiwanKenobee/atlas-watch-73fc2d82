@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Radio, Shield, Database, Clock, Target, AlertTriangle, TrendingUp, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ConfidenceChart, DetectionFrequencyChart, FalsePositiveChart } from '@/components/AgentCharts';
 
 export default function AgentDetail() {
   const { id } = useParams<{ id: string }>();
