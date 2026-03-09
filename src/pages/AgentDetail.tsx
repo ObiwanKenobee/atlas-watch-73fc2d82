@@ -111,6 +111,14 @@ export default function AgentDetail() {
         </div>
       </div>
 
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <ConfidenceChart agent={agent} />
+        <DetectionFrequencyChart agent={agent} />
+      </div>
+      <div className="mb-6">
+        <FalsePositiveChart agent={agent} />
+      </div>
+
       <div className="atlas-card p-4">
         <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">Audit Log</h3>
         <div className="space-y-2">
