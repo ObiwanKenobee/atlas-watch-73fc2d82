@@ -14,6 +14,7 @@ import {
 import { NavLink } from '@/components/NavLink';
 import { useLocation } from 'react-router-dom';
 import { Bot, AlertTriangle, GitBranch, BookOpen, Shield, FlaskConical, Map } from 'lucide-react';
+import { NotificationBell } from '@/components/NotificationBell';
 
 const navItems = [
   { title: 'Command Center', url: '/', icon: Bot },
@@ -89,9 +90,12 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
             <span className="ml-3 text-xs text-muted-foreground font-mono">
               {new Date().toLocaleTimeString()} UTC
             </span>
-            <div className="ml-auto flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-atlas-success animate-pulse-glow" />
-              <span className="text-[10px] text-muted-foreground">System Online</span>
+            <div className="ml-auto flex items-center gap-3">
+              <NotificationBell />
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-atlas-success animate-pulse-glow" />
+                <span className="text-[10px] text-muted-foreground">System Online</span>
+              </div>
             </div>
           </header>
           <main className="flex-1 overflow-y-auto atlas-scrollbar">{children}</main>

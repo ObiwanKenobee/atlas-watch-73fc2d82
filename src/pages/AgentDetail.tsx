@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Radio, Shield, Database, Clock, Target, AlertTriangle, TrendingUp, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ConfidenceChart, DetectionFrequencyChart, FalsePositiveChart } from '@/components/AgentCharts';
 
 export default function AgentDetail() {
   const { id } = useParams<{ id: string }>();
@@ -108,6 +109,14 @@ export default function AgentDetail() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <ConfidenceChart agent={agent} />
+        <DetectionFrequencyChart agent={agent} />
+      </div>
+      <div className="mb-6">
+        <FalsePositiveChart agent={agent} />
       </div>
 
       <div className="atlas-card p-4">
