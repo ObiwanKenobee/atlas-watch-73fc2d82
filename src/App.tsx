@@ -11,6 +11,7 @@ import ConvergencePage from "./pages/ConvergencePage";
 import RegistryPage from "./pages/RegistryPage";
 import GovernancePage from "./pages/GovernancePage";
 import SandboxPage from "./pages/SandboxPage";
+import MapPage from "./pages/MapPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
