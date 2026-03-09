@@ -14,6 +14,7 @@ import {
 import { NavLink } from '@/components/NavLink';
 import { useLocation } from 'react-router-dom';
 import { Bot, AlertTriangle, GitBranch, BookOpen, Shield, FlaskConical, Map } from 'lucide-react';
+import { NotificationBell } from '@/components/NotificationBell';
 
 const navItems = [
   { title: 'Command Center', url: '/', icon: Bot },
